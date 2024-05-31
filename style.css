@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    position: relative;
+}
+
+.registration-form::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 5px solid transparent;
+    border-radius: 8px;
+    animation: pulse 2s infinite alternate;
+  }
+  
+  @keyframes pulse {
+    0% {
+      border-color: #0008ff80;
+    }
+    100% {
+      border-color: #00ccff80;
+    }
+  }
+
+.registration-form__form {
+    position: relative;
+    z-index: 1;
+}
+
+.registration-form__title {
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+
+.registration-form__group {
+    margin-bottom: 15px;
+}
+
+.registration-form__label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.registration-form__input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.registration-form__button {
+    width: 100%;
+    padding: 10px;
+    background-color: #06c;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.registration-form__button:hover {
+    background-color: rgb(2, 115, 227);
+}
+
+.race {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hint-message {
+    color: rgb(150, 150, 150);
+    font-size: 12px;
+}
+
+.error-message {
+    display: none;
+    color: red;
+    font-size: 12px;
+}
+
+.registration-form__reg {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+.registration-form__reg-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+
+.voice-button {
+    background-color: #389fa5;
+    height: 30px;
+    font-size: 14px;
+    padding: 4px;
+}
+
+.voice-button:hover {
+    background-color: #36c2c9;
+    height: 30px;
+    font-size: 14px;
+    padding: 4px;
+}

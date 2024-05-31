@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Z1431 Леонов ППС КП 2024</title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <section class="main">
+         <div class="registration-form">
+            <form class="registration-form__form" id="registrationForm">
+               <h1 class="registration-form__title">Форма регистрации</h1>
+               <div class="registration-form__group">
+                  <label class="registration-form__label" for="email">Эл. почта</label>
+                  <input class="registration-form__input" type="email" id="email" name="email" required autocomplete="email">
+                  <div class="error-message" id="emailError">Пожалуйста, введите действительный адрес электронной почты.</div>
+                  <div class="hint-message">Пример: example@example.com</div>
+               </div>
+               <div class="registration-form__group">
+                  <label class="registration-form__label" for="username">Логин</label>
+                  <input class="registration-form__input" type="text" id="username" name="username" required autocomplete="username">
+                  <div class="error-message" id="usernameError">Логин должен содержать от 3 до 8 символов.</div>
+                  <div class="hint-message">От 3 до 8 символов</div>
+               </div>
+               <div class="registration-form__group">
+                  <label class="registration-form__label" for="password">Пароль</label>
+                  <input class="registration-form__input" type="password" id="password" name="password" required autocomplete="new-password">
+                  <div class="error-message" id="passwordError">Пароль должен быть не менее 8 символов.</div>
+                  <div class="hint-message">Не менее 8 символов</div>
+               </div>
+               <div class="registration-form__group">
+                  <label class="registration-form__label" for="confirmPassword">Повторите пароль</label>
+                  <input class="registration-form__input" type="password" id="confirmPassword" name="confirmPassword" required autocomplete="new-password">
+                  <div class="error-message" id="confirmPasswordError">Пароли не совпадают.</div>
+               </div>
+               <div class="registration-form__group">
+                  <label class="registration-form__label" for="phone">Телефон</label>
+                  <input class="registration-form__input" type="tel" id="phone" name="phone" required autocomplete="tel">
+                  <div class="error-message" id="phoneError">Пожалуйста, введите действительный номер телефона.</div>
+                  <div class="hint-message">Пример: +1234567890</div>
+               </div>
+               <div class="registration-form__group race">
+                  <label for="race">Ваш пол</label>
+                  <div>
+                     <input type="radio" id="man" name="race" value="man">
+                     <label for="man">Мужчина</label>
+                  </div>
+                  <div>
+                     <input type="radio" id="woman" name="race" value="woman">
+                     <label for="woman">Женщина</label>
+                  </div>
+                  <div class="error-message" id="raceError">Пожалуйста, выберите ваш пол.</div>
+               </div>
+               <div class="registration-form__group voice">
+                  <label class="registration-form__label" for="voiceConfirmation">Скажите секретную фразу</label>
+                  <input style="margin-bottom: 10px;" class="registration-form__input" type="text" id="voiceConfirmation" name="voiceConfirmation" required>
+                  <button id="startButton" class="registration-form__button voice-button" type="button" onclick="startListening()">Сказать секретную фразу</button>
+                  <div class="error-message" id="voiceConfirmationError">Пожалуйста, произнесите фразу "Я люблю ГУАП".</div>
+               </div>
+               <div class="registration-form__reg">
+                  <span style="font-weight: 600;">Угадай кнопку регистрации :)</span>
+                  <div class="registration-form__reg-buttons">
+                     <button class="registration-form__button" type="submit">Регистрация</button>
+                     <button class="registration-form__button" type="button" id="wrongButton">Регистрация</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </section>
+      <script src="main.js"> </script>
+      <script src="voice.js"> </script>
+   </body>
+</html>
